@@ -9,6 +9,7 @@ MANAGE_FILE=${MANAGE_FILE:-fakepath}
 bpwatch start compilemessages
 
 echo "       Compile messages..."
+export PATH="$HOME/gettext/bin:$PATH";
 python $MANAGE_FILE compilemessages
 
 bpwatch stop compilemessages
